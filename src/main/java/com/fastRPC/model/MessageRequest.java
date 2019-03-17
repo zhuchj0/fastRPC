@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package com.fastRPC.model;
 
 import java.io.Serializable;
@@ -7,11 +12,14 @@ public class MessageRequest implements Serializable {
     private String messageId;
     private String className;
     private String methodName;
-    private Class<?>[] typeParameters;
+    private String[] typeParameters;
     private Object[] parameters;
 
+    public MessageRequest() {
+    }
+
     public String getMessageId() {
-        return messageId;
+        return this.messageId;
     }
 
     public void setMessageId(String messageId) {
@@ -19,7 +27,7 @@ public class MessageRequest implements Serializable {
     }
 
     public String getClassName() {
-        return className;
+        return this.className;
     }
 
     public void setClassName(String className) {
@@ -27,37 +35,30 @@ public class MessageRequest implements Serializable {
     }
 
     public String getMethodName() {
-        return methodName;
+        return this.methodName;
     }
 
     public void setMethodName(String methodName) {
         this.methodName = methodName;
     }
 
-    public Class<?>[] getTypeParameters() {
-        return typeParameters;
+    public String[] getTypeParameters() {
+        return this.typeParameters;
     }
 
-    public void setTypeParameters(Class<?>[] typeParameters) {
+    public void setTypeParameters(String[] typeParameters) {
         this.typeParameters = typeParameters;
     }
 
     public Object[] getParameters() {
-        return parameters;
+        return this.parameters;
     }
 
     public void setParameters(Object[] parameters) {
         this.parameters = parameters;
     }
 
-    @Override
     public String toString() {
-        return "MessageRequest{" +
-                "messageId='" + messageId + '\'' +
-                ", className='" + className + '\'' +
-                ", methodName='" + methodName + '\'' +
-                ", typeParameters=" + Arrays.toString(typeParameters) +
-                ", parameters=" + Arrays.toString(parameters) +
-                '}';
+        return "MessageRequest{messageId='" + this.messageId + '\'' + ", className='" + this.className + '\'' + ", methodName='" + this.methodName + '\'' + ", typeParameters=" + Arrays.toString(this.typeParameters) + ", parameters=" + Arrays.toString(this.parameters) + '}';
     }
 }

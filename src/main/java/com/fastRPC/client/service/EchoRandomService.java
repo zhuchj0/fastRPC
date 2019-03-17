@@ -1,10 +1,11 @@
-package com.fastRPC.server.service;
+package com.fastRPC.client.service;
 
+import com.fastRPC.annotation.FastRpcConsumerClass;
 import com.fastRPC.annotation.FastRpcRegisterableClass;
 import com.fastRPC.annotation.FastRpcRegisterableMethod;
 
 
-@FastRpcRegisterableClass(defaultImpl = "com.fastRPC.server.service.impl.EchoRandomServiceImpl")
+@FastRpcConsumerClass
 public interface EchoRandomService {
     @FastRpcRegisterableMethod
     public String echo();

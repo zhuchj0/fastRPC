@@ -1,29 +1,32 @@
 package com.fastRPC;
 
-import com.fastRPC.client.Client;
-import com.fastRPC.server.Server;
-import com.fastRPC.server.service.EchoRandomServiceImpl;
-import io.netty.util.concurrent.SingleThreadEventExecutor;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.fastRPC.bootstrap.FastRpcClientBootstrap;
+import com.fastRPC.client.core.ProxyFactory;
+import com.fastRPC.client.service.Echo2;
+import com.fastRPC.client.zookeeper.NamingManager;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
-@SpringBootApplication
 public class FastRpcApplication {
-    //Spring boot的CommandLineRunner接口主要用于实现在应用初始化后，去执行一段代码块逻辑，这段初始化代码在整个应用生命周期内只会执行一次。
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(FastRpcApplication.class, args);
-//        new Server(9000).run();
-         new Client().run();
+
+        FastRpcClientBootstrap.start();
+        Echo2 service = ProxyFactory.getInstance(Echo2.class);
+        //计时500次
+        Long start = System.currentTimeMillis();
+        int count = 10;
+        for(int i=0;i<count;i++){
+            //实际调用
+            service.echotry();
+
+        }
+        Long pass = (System.currentTimeMillis()-start)/1000;
+        System.out.println("执行"+count+"次用时"+pass+"秒");
+        
+//        FastRpcServerBootstrap.start();
+
 
     }
-
-
 }
+
 

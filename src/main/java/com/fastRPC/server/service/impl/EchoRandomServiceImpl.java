@@ -1,9 +1,8 @@
-package com.fastRPC.server.service;
+package com.fastRPC.server.service.impl;
 
 
-import org.springframework.stereotype.Component;
+import com.fastRPC.server.service.EchoRandomService;
 
-@Component
 public class EchoRandomServiceImpl implements EchoRandomService {
     @Override
     public String echo() {
