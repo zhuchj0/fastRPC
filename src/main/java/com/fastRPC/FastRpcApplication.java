@@ -23,7 +23,7 @@ public class FastRpcApplication {
 //        Long pass = (System.currentTimeMillis()-start)/1000;
 //        System.out.println("执行"+count+"次用时"+pass+"秒");
 
-        FastRpcServerBootstrap.start();
+//        FastRpcServerBootstrap.start();
 
 
     }

@@ -4,7 +4,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 public enum RpcSerializeProtocol {
-    JDKSERIALIZE("jdknative"), KRYOSERIALIZE("kryo"), HESSIANSERIALIZE("hessian"), PROTOSTUFFSERIALIZE("protostuff");
+    JDKSERIALIZE("jdknative"), HESSIANSERIALIZE("hessian"), PROTOSTUFFSERIALIZE("protostuff");
 
     private String serializeProtocol;
 

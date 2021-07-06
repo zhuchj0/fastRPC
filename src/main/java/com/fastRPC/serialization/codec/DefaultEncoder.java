@@ -6,11 +6,15 @@ import io.netty.handler.codec.MessageToByteEncoder;
 
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DefaultEncoder extends MessageToByteEncoder {
+    Logger logger = Logger.getLogger(DefaultEncoder.class.getName());
+
     @Override
     protected void encode(ChannelHandlerContext channelHandlerContext, Object o, ByteBuf byteBuf) throws Exception {
-        System.out.println("in encode"+o.getClass()+"size "+byteBuf.readableBytes());
+        logger.log(Level.FINE,"in encode" + o.getClass() + "size " + byteBuf.readableBytes());
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(ba);
         oos.writeObject(o);

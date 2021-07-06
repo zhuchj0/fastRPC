@@ -6,10 +6,8 @@
 package com.fastRPC.zookeeper;
 
 import com.fastRPC.utils.PropertyUtil;
-import java.util.concurrent.CountDownLatch;
 import org.I0Itec.zkclient.ZkClient;
 import org.I0Itec.zkclient.ZkConnection;
-import org.apache.zookeeper.Watcher;
 
 public class BaseZookeeperFactory {
     private static  ZkClient serverZK;
