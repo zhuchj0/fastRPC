@@ -9,13 +9,10 @@
         <artifactId>fastRPC</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.fastRPC</groupId>
-    <artifactId>serialization</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
 
-    <name>serialization</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <groupId>com.fastRPC</groupId>
+    <artifactId>utils</artifactId>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,11 +26,6 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>5.0.0.Alpha2</version>
         </dependency>
     </dependencies>
 
